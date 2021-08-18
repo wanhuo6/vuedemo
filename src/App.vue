@@ -1,12 +1,17 @@
 <template>
   <div id="app">
+    <NavBar v-if="$route.meta.show_header"/>
 <!--    <img src="./assets/logo.png">-->
     <router-view/>
   </div>
 </template>
 
 <script>
+import  NavBar from './components/NavBar'
 export default {
+  components:{
+    NavBar
+  },
   name: 'App'
 }
 </script>
@@ -18,6 +23,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
