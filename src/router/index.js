@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hi from '../components/Hi'
 import Login from "../components/Login";
+import QQLogin from "../components/QQLogin";
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
         show_header: true,
         title_text: '登录页面'
       }
+    },
+    {
+      path: '/qqlogin',
+      name: 'QQLogin',
+      component: QQLogin
     }
   ]
 })
